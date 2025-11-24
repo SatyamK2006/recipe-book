@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { RecipeProvider } from "./context/RecipeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -38,15 +33,13 @@ const AnimatedRoutes = () => {
 function App() {
   return (
     <RecipeProvider>
-      <Router>
-        <div className="min-h-screen bg-[#FAFAF9] font-sans text-slate-900 flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            <AnimatedRoutes />
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <div className="min-h-screen bg-[#FAFAF9] font-sans text-slate-900 flex flex-col">
+        <Navbar />
+        <main className="flex-grow">
+          <AnimatedRoutes />
+        </main>
+        <Footer />
+      </div>
     </RecipeProvider>
   );
 }
